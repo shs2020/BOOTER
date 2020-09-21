@@ -28,5 +28,5 @@ jobs:
           
       -name:surge
        run:npm install -g surge
-       run: surge ./ booternew.surge.sh  --token${{secret.SURGE_TOKEN}}
+       run: surge ./ booternew.surge.sh  --token${{secrets.SURGE_TOKEN}}
          
