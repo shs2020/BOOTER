@@ -24,9 +24,10 @@ jobs:
       - name: Run a multi-line script
         uses: actions/setup-node@v2-beta 
         with:
-          node-version:12
+          node-version: 12
           
-      -name:surge
-       run:npm install -g surge
-       run: surge ./ booternew.surge.sh  --token${{secrets.SURGE_TOKEN}}
+      - name: surge
+        run: npm install -g surge
+      - name: run
+        run: surge ./ booternew.surge.sh  --token${{secrets.SURGE_TOKEN}}
          
